@@ -44,20 +44,25 @@ function HomeScreen() {
     setChapterDetail(chapter);
   };
   return (
-    <div className="row p-5 home-body ">
-      <div className="col-lg-4 col-md-4 col-sm-12 col-12  scroll">
-        <RecitersScreen reciters={reciters} reciterHandler={reciterHandler} />
+    <>
+      <div className="text-center fs-4 ">
+        <h1>Qur'aan App</h1>
       </div>
-      <div className="col-lg-4 col-md-4 col-sm-12 col-12 scroll ">
-        <ChapterScreen chapters={chapters} chapterHandler={chapterHandler} />
+      <div className="row p-5 home-body ">
+        <div className="col-lg-4 col-md-4 col-sm-12 col-12  scroll">
+          <RecitersScreen reciters={reciters} reciterHandler={reciterHandler} />
+        </div>
+        <div className="col-lg-4 col-md-4 col-sm-12 col-12 scroll ">
+          <ChapterScreen chapters={chapters} chapterHandler={chapterHandler} />
+        </div>
+        <div className="col-lg-4 col-md-4 col-sm-12 col-12 ">
+          <PleyarScreen
+            reciterDetail={reciterDetail}
+            chapterDetail={chapterDetail}
+          />
+        </div>
       </div>
-      <div className="col-lg-4 col-md-4 col-sm-12 col-12 ">
-        <PleyarScreen
-          reciterDetail={reciterDetail}
-          chapterDetail={chapterDetail}
-        />
-      </div>
-    </div>
+    </>
   );
 }
 
