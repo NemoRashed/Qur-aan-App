@@ -45,17 +45,18 @@ function HomeScreen() {
   };
   return (
     <>
-      <div className="text-center fs-4 ">
+      <div className="text-center fs-4 title ">
         <h1>Qur'aan App</h1>
       </div>
-      <div className="row p-5 home-body ">
-        <div className="col-lg-4 col-md-4 col-sm-12 col-12  scroll">
+
+      <div className="row p-5 home-body  ">
+        <div className="col-lg-4 col-md-4 col-sm-12 col-12 space scroll">
           <RecitersScreen reciters={reciters} reciterHandler={reciterHandler} />
         </div>
-        <div className="col-lg-4 col-md-4 col-sm-12 col-12 scroll ">
+        <div className="col-lg-4 col-md-4 col-sm-12 col-12 space scroll ">
           <ChapterScreen chapters={chapters} chapterHandler={chapterHandler} />
         </div>
-        <div className="col-lg-4 col-md-4 col-sm-12 col-12 ">
+        <div className="col-lg-4 col-md-4 col-sm-12  space col-12 ">
           <PleyarScreen
             reciterDetail={reciterDetail}
             chapterDetail={chapterDetail}
